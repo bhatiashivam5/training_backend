@@ -1,6 +1,6 @@
 module.exports  = (sequelize,Sequelize)=>{
-    const Faculty = sequelize.define('faculties',{
-            facultyId: {
+    const Admin = sequelize.define('admins',{
+            adminId: {
               type: Sequelize.STRING,
               allowNULL: false,
               primaryKey: true,
@@ -20,29 +20,11 @@ module.exports  = (sequelize,Sequelize)=>{
             address: {
                 type: Sequelize.STRING,
                 allowNULL: false,
-              },
-            fatherName: {
-                type: Sequelize.STRING,
-                allowNULL: false,
-              },
-             motherName: {
-                type: Sequelize.STRING,
-                allowNULL: false,
-              },
-              joiningYear: {
-                type: Sequelize.STRING,
-                allowNULL: false,
-              },
-              facultyDesignation: {
-                type: Sequelize.STRING,
-                allowNULL: false,
-              },
-              
-              
-          },
+              }
+           },
           {
             timestamps: false,
           }
         );
-        return Faculty;
+        return Admin;
       };

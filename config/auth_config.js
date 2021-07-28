@@ -1,4 +1,4 @@
-  
+require('dotenv').config({path:'./env'});
 module.exports = {
-    secret: "school-secret-key"
+    secret: process.env.Secret
   };

@@ -13,14 +13,7 @@ module.exports = (sequelize,Sequelize)=>{
             type:Sequelize.STRING,
             allowNULL:false,
         },
-        deptId:{
-            type:Sequelize.INTEGER,
-            allowNULL:false,
-            references: {
-                model:"departments",
-                key: 'deptId'
-            }
-        },
+    
       
     },{
         timestamps: false,

@@ -3,16 +3,16 @@
         deptId:{
             type:Sequelize.INTEGER,
             allowNULL:false,
-            primaryKey:true
+            primaryKey:true,
+            autoIncrement:true
         },
         deptName:{
             type:Sequelize.STRING,
             allowNULL:false
         },
-
-
-    },{
+   },{
         timestamps: false,
-    })
+    }
+    )
     return Department;
 }

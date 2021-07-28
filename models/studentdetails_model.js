@@ -1,23 +1,12 @@
   module.exports  = (sequelize,Sequelize)=>{
     const Student = sequelize.define('students',{
-            userId: {
-              type: Sequelize.INTEGER,
-              allowNULL: false,
-              onDelete: 'CASCADE',
-              onUpdate:'CASCADE', 
-              references: {
-                model: "users",
-                key: "userId",
-               
-              },
-            },
             studentId: {
-              type: Sequelize.INTEGER,
+              type: Sequelize.STRING,
               allowNULL: false,
               primaryKey: true,
             },
             contact: {
-                type: Sequelize.STRING,
+                type: Sequelize.BIGINT,
                 allowNULL: false,
               },
             dob: {
@@ -44,17 +33,7 @@
                 type: Sequelize.STRING,
                 allowNULL: false,
               },
-              courseId: {
-                type: Sequelize.INTEGER,
-                allowNULL: false,
-                onDelete: 'CASCADE',
-                onUpdate:'CASCADE', 
-                references: {
-                  model: "courses",
-                  key: "course_id",
-                 
-                },
-              },
+             
           },
           {
             timestamps: false,
